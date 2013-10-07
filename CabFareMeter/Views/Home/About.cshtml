@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+<hgroup class="title">
+    <h1>@ViewBag.Title.</h1>
+    <h2>@ViewBag.Message</h2>
+</hgroup>
+<article>
+    <p>
+        Cab Meter.
+    </p>
+
+    <p>
+        An App to calculate Cab Meter reading.
+    </p>
+
+    <p>
+        The unit fare is:
+    <ul>
+        <li> One-fifth of a mile, when the taxicab is traveling at less than 6 miles an hour</li>
+        <li> 60 seconds when not in motion or traveling at 6 miles per hour or more.</li>
+        <li> Night surcharge of $.50 after 8:00 PM & before 6:00 AM</li>
+        <li> Peak hour Weekday Surcharge of $1.00 Monday - Friday after 4:00 PM & before 8:00 PM</li>
+        <li> New York State Tax Surcharge of $.50 per ride.</li>
+        <li> All examples/problems will have distance in units of 1/5 of a mile and in minutes - there will be no fractional units)</li>
+    </ul>
+    </p>
+</article>
+<aside>
+    <h3>Tech Stack</h3>
+    <p>
+        ASP.Net MVC 4, Web API, AngularJS, Jasmine.
+    </p>
+    <ul>
+        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+        <li>@Html.ActionLink("About", "About", "Home")</li>
+        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+    </ul>
+</aside>

@@ -1,0 +1,40 @@
+﻿@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title</h1>
+            </hgroup>
+            <ul>
+            <li>$3.00 upon entry</li>
+            <li>$0.35 for each additional unit</li>
+            </ul>
+        </div>
+    </section>
+}
+<div data-ng-app="fareCalculator">
+    <div data-ng-controller="mainController">
+        <div>
+            <label for="minutesAbove6mph">
+                Minutes while traveling above 6 mph</label>
+            <input type="text" id="minutesAbove6mph" placeholder="Enter Minutes" data-ng-model="fareInput.MinutesAbove6mph" />
+            <label for="milesBelow6mph">
+                Miles traveled while traveling below 6 mph</label>
+            <input type="text" id="milesBelow6mph" placeholder="Enter Miles" data-ng-model="fareInput.MilesBelow6mph" />
+            <label for="date">
+                Date</label>
+            <input type="date" id="date" data-ng-model="fareInput.Date" />
+            <label for="time">
+                Time of start of ride</label>
+            <input type="time" id="time" placeholder="Enter Miles" data-ng-model="fareInput.Time" />
+            <button type="button" data-ng-click="getFare()">
+                Calculate</button>
+        </div>
+        <div>
+            <label for="result">
+                Calculated Fare:
+            </label>
+            <input type="text" id="result" data-ng-model="result" disabled />
+        </div>
+    </div>
+</div>
+<script src="~/Scripts/app/fareCalculator.js"></script>
